@@ -1,0 +1,40 @@
+
+///////////////
+Design
+
+main:
+    deals with socket details, sends connections to individual sockets
+
+serve_request:
+    collects all the data for the packet from various sources
+        tried to be very modular about these sources-
+        almost everything here calls outside functions
+
+    pulls the full request
+    parses important data (request type and filename)
+        we don't do any further parsing/error checking in the request, although it should
+    gets the mime type for the file
+    gets the data of the file
+
+    sends all this info to send_packet
+    
+
+send_packet:
+    takes in all the data needed for the packet, and sends a finished packet to the client
+    this function uses helper functions for each line of the packet
+    to try and keep the string parsing horror to a minimum
+
+
+////////////////
+Testing
+    test suite
+    telnet
+    browser connections
+
+
+////////////////
+written with 
+Sarah Laplante laplante@ccs.neu.edu
+Eric Chin chiner@ccs.neu.edu
+
+
