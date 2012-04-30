@@ -12,7 +12,10 @@ serve_request:
 
     pulls the full request
     parses important data (request type and filename)
-        we don't do any further parsing/error checking in the request, although it should
+        we don't do any further parsing/error checking in the request, 
+        although it should
+
+    checks for directory requests and checks for index.html/index.htm
     gets the mime type for the file
     gets the data of the file
 
@@ -20,14 +23,15 @@ serve_request:
     
 
 send_packet:
-    takes in all the data needed for the packet, and sends a finished packet to the client
+    takes in all the data needed for the packet, 
+    and sends a finished packet to the client
+
     this function uses helper functions for each line of the packet
     to try and keep the string parsing horror to a minimum
 
 
 ////////////////
 Testing
-    test suite
     telnet
     browser connections
 
