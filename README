@@ -1,3 +1,11 @@
+///////////////
+Use
+
+Takes an absolute directory and a port (optional)
+
+Serves the file content of that directory when files are requested
+Sends a directory listing when folders are requested
+
 
 ///////////////
 Design
